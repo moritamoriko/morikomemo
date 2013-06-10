@@ -4,10 +4,6 @@ ruby '1.9.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0.rc1'
 
-gem 'pg'
-gem 'rails_log_stdout', github: 'heroku/rails_log_stdout'
-gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
-
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0.rc1'
 
@@ -46,6 +42,12 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 gem 'minimum-omniauth-scaffold'
+
+group :production do
+	gem 'pg'
+	gem 'rails_log_stdout', github: 'heroku/rails_log_stdout'
+	gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
+end
 
 group :development do
 	# Use sqlite3 as the database for Active Record
