@@ -1,4 +1,5 @@
 Twitterstudy::Application.routes.draw do
+  resources :memos
   root to: 'top#index'
 
   # For OmniAuth
