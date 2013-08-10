@@ -43,6 +43,7 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 gem 'minimum-omniauth-scaffold'
+gem 'haml-rails'
 
 group :production do
 	gem 'pg'
