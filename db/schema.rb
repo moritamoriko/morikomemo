@@ -11,7 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20000101000000) do
+ActiveRecord::Schema.define(version: 20130810071720) do
+
+  create_table "memos", force: true do |t|
+    t.text     "entry"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "provider"
