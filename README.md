@@ -1,21 +1,21 @@
-# APP_NAME
+# memo
 
-APP_DESCRIPTION.
+140文字以上のつぶやきをURLでTwitterにシェアできるアプリになる予定。
 
 ## Local Setting
 
 ### GitHub上でFork
 
 ```
-https://github.com/USER_NAME/APP_NAME/
+https://github.com/moritamoriko/morikomemo/
 ```
 
 ### リポジトリをローカルへ作成
 
 ```
 cd ~/WORK_DIRECTORY
-git clone git@github.com:YOUR_USER_NAME/APP_NAME.git
-cd APP_NAME
+git clone git@github.com:moritamoriko/morikomemo.git
+cd morikomemo
 ```
 
 ### ブランチ作成
@@ -77,4 +77,4 @@ http://0.0.0.0:3000/
 
 ## Copyright
 
-Copyright (c) 2012 MY_NAME. <a href="http://creativecommons.org/licenses/by-nc-sa/2.1/jp/" target="_blank">CC BY-NC-SA 2.1</a>
+Copyright (c) 2013 moritamoriko. <a href="http://creativecommons.org/licenses/by-nc-sa/2.1/jp/" target="_blank">CC BY-NC-SA 2.1</a>
