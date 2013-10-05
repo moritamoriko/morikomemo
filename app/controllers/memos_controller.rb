@@ -1,4 +1,8 @@
 class MemosController < ApplicationController
+   def index
+   @memos = Memo.all
+  end
+
   def new
     @memo = Memo.new
 
@@ -12,6 +16,10 @@ class MemosController < ApplicationController
     @memo = Memo.new(memo_params)
     @memo.save
     redirect_to new_memo_path
+  end
+
+  def show
+    @memo = Memo.find(params[:id])
   end
 
   private

@@ -1,0 +1,4 @@
+- @memos.each do |memo|
+ %li.memo
+  = memo.entry
+  = link_to 'read more' , memo_path(memo)
