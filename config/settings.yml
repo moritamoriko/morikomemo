@@ -4,13 +4,13 @@ facebook_page: "https://www.facebook.com/"
 github_page: "https://github.com/"
 
 # アプリケーション名
-app_name: "テスト"
+app_name: "140文字以上でもつぶやけるメモ帳"
 
 # プログラマTwitterID
 programmer_twitter_id: "moriko_o"
 
 # デザイナーTwitterID
-designer_twitter_id: "moriko_o	"
+designer_twitter_id: "moriko_o"
 
 # 曜日
 weekday: ["日", "月", "火", "水", "木", "金", "土"]

@@ -1,0 +1,14 @@
+%h1 編集画面
+
+= form_for @memo do |f|
+  %div.field
+    = f.label :text
+    %br
+    = f.text_area :entry
+
+  %div.actions
+    = f.submit
+
+= link_to '一覧' , memos_path
+= link_to '削除' , memo_path(@memo)
+= link_to 'つぶやく' , "https://twitter.com/"

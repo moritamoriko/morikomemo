@@ -15,11 +15,27 @@ class MemosController < ApplicationController
   def create
     @memo = Memo.new(memo_params)
     @memo.save
-    redirect_to new_memo_path
+    redirect_to @memo
   end
 
   def show
     @memo = Memo.find(params[:id])
+  end
+
+  def edit
+    @memo = Memo.find(params[:id])
+  end
+
+  def update
+    @memo = Memo.find(params[:id])
+    @memo.update(memo_params)
+    redirect_to edit_memo_path(@memo), notice: "編集しました。"
+  end
+
+  def destroy
+    @memo = Memo.find(params[:id])
+    @memo.destroy
+    redirect_to memos_path, notice: "削除しました。"
   end
 
   private

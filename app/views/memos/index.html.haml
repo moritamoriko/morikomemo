@@ -1,4 +1,5 @@
 - @memos.each do |memo|
  %li.memo
-  = memo.entry
+  = memo.entry.truncate(140)
   = link_to 'read more' , memo_path(memo)
+
