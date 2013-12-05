@@ -3,5 +3,8 @@ class TopController < ApplicationController
 
   # トップ
   def index
+  	if signed_in?
+  	  redirect_to memos_path
+  	end
   end
 end

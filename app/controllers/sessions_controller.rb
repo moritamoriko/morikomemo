@@ -18,7 +18,7 @@ class SessionsController < ApplicationController
       return
     end
 
-    redirect_to :root, notice: "ログインしました。"
+    redirect_to memos_path, notice: "ログインしました。"
   end
 
   # ログアウト
