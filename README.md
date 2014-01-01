@@ -1,6 +1,7 @@
 # memo
 
 140文字以上のつぶやきをURLでTwitterにシェアできるアプリになる予定。
+○(･x･)○
 
 ## Local Setting
 
