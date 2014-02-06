@@ -1,6 +1,6 @@
 class MemosController < ApplicationController
    def index
-   @memos = Memo.all
+   @memos = current_user.memos
   end
 
   def new
@@ -14,7 +14,8 @@ class MemosController < ApplicationController
 
   def create
     @memo = Memo.new(memo_params)
-    @memo.save
+    @memo.user_id = current_user.id
+    @memo.save!
     redirect_to @memo
   end
 

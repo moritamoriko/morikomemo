@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_many :memos
   # auth情報更新
   def auth_update( auth )
     if auth["provider"] == "facebook"

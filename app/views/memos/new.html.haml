@@ -1,6 +1,6 @@
 %h1 テキストぼっくす
 
-= Memo.last.try(:entry) # debug用
+= current_user.memos.last.try(:entry) # debug用
 
 = form_for @memo do |f|
   %div.field
