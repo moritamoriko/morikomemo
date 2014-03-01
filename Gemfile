@@ -44,6 +44,7 @@ end
 # gem 'debugger', group: [:development, :test]
 gem 'minimum-omniauth-scaffold'
 gem 'haml-rails'
+gem 'twitter'
 
 group :production do
 	gem 'pg'

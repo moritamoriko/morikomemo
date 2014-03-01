@@ -10,6 +10,9 @@ class SessionsController < ApplicationController
     user.auth_update( auth )
 
     session[:user_id] = user.id
+    session[:oauth_token] = auth['credentials']['token']
+    session[:oauth_token_secret] = auth['credentials']['secret']
+
 
     # 保管URLへリダイレクト
     unless session[:request_url].blank?

@@ -39,9 +39,25 @@ class MemosController < ApplicationController
     redirect_to memos_path, notice: "削除しました。"
   end
 
+  def tweet
+    @memo = Memo.find(params[:id])
+    twitter_client.update(@memo.entry)
+    flash[:notice] = "tweet: #{@memo.entry}"
+    render :show
+  end
+
   private
 
   def memo_params
     params.require(:memo).permit(:entry)
+  end
+
+  def twitter_client
+    Twitter::Client.new(
+      :consumer_key       => Settings.twitter_key,
+      :consumer_secret    => Settings.twitter_secret,
+      :oauth_token        => session[:oauth_token],
+      :oauth_token_secret => session[:oauth_token_secret]
+    )
   end
 end
