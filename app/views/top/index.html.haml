@@ -1,4 +1,6 @@
 %h1
-  #{Settings.app_name}
-%a(href="/memos/new" title=" ")<
-  つぶやく
+  = Settings.app_name
+
+= link_to "/auth/twitter" do
+  %i.fa.fa-twitter
+  使う
