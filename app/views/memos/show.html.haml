@@ -1,5 +1,6 @@
 .memo= @memo.entry
-= link_to '編集' , edit_memo_path(@memo)
-= link_to '一覧' , memos_path
-= link_to '削除' , memo_path(@memo), method: :delete, data:{ confirm: '削除してもいいですか？' }
-= link_to 'つぶやく' , tweet_memo_path
+- if signed_in?
+  = link_to '編集' , edit_memo_path(@memo)
+  = link_to '一覧' , memos_path
+  = link_to '削除' , memo_path(@memo), method: :delete, data:{ confirm: '削除してもいいですか？' }
+  = link_to 'つぶやく' , tweet_memo_path

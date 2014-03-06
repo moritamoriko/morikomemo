@@ -1,5 +1,6 @@
 class MemosController < ApplicationController
-   def index
+  skip_before_action :authenticate, {:only => :show}
+  def index
    @memos = current_user.memos
   end
 
