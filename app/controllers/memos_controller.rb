@@ -41,7 +41,16 @@ class MemosController < ApplicationController
 
   def tweet
     @memo = Memo.find(params[:id])
-    twitter_client.update(@memo.entry)
+    if @memo.entry.size > 140
+      # puts "140文字超えたよ"
+      shorttweet = @memo.entry.truncate(100)
+      shorttweet += " "
+      shorttweet += memo_url(@memo)
+      twitter_client.update(shorttweet)
+    else
+      twitter_client.update(@memo.entry)
+    end
+
     flash[:notice] = "tweet: #{@memo.entry}"
     render :show
   end
