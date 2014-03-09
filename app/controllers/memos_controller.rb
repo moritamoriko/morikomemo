@@ -25,7 +25,7 @@ class MemosController < ApplicationController
   end
 
   def edit
-    @memo = Memo.find(params[:id])
+    @memo = current_user.memos.find(params[:id])
   end
 
   def update

@@ -1,5 +1,8 @@
 .memo= @memo.entry
-- if signed_in?
+%p.memo-user
+  = @memo.user.nickname
+  のメモ
+- if signed_in? and (@memo.user == current_user)
   = link_to '編集' , edit_memo_path(@memo)
   = link_to '一覧' , memos_path
   = link_to '削除' , memo_path(@memo), method: :delete, data:{ confirm: '削除してもいいですか？' }
