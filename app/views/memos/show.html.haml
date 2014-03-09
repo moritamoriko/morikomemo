@@ -1,9 +1,17 @@
-.memo= @memo.entry
-%p.memo-user
-  = @memo.user.nickname
-  のメモ
-- if signed_in? and (@memo.user == current_user)
-  = link_to '編集' , edit_memo_path(@memo)
-  = link_to '一覧' , memos_path
-  = link_to '削除' , memo_path(@memo), method: :delete, data:{ confirm: '削除してもいいですか？' }
-  = link_to 'つぶやく' , tweet_memo_path
+.memo
+  .memo__entry
+    = @memo.entry
+  %p.memo__user
+    %span.memo__user-image= image_tag(@memo.user.image, alt: "@memo.user.nickname")
+    %span.memo__user-nickname= @memo.user.nickname
+    のメモ
+  - if signed_in? and (@memo.user == current_user)
+    %ul.memo__actions
+      %li.memo__action--edit
+        = link_to '編集' , edit_memo_path(@memo), class: "memo__action-link--edit normal-button"
+      %li.memo__action--memos
+        = link_to '一覧' , memos_path, class: "memo__action-link--memos normal-button"
+      %li.memo__action--delete
+        = link_to '削除' , memo_path(@memo), method: :delete, data:{ confirm: '削除してもいいですか？' }, class: "memo__action-link--delete danger-button"
+      %li.memo__action--tweet
+        = link_to 'つぶやく' , tweet_memo_path, class: "memo__action-link--tweet normal-button"
