@@ -1,4 +1,4 @@
-# memo
+# morikomemo
 
 140文字以上のつぶやきをURLでTwitterにシェアできるアプリになる予定。
 
