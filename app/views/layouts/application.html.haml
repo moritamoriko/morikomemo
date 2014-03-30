@@ -8,25 +8,23 @@
       = javascript_include_tag "xray"
     = csrf_meta_tags
   %body
-    %header.header
-      = link_to Settings.app_name, :root, class: "header__logo"
-      - if signed_in?
+    - if signed_in?
+      %header.header__signed_in
+        = link_to Settings.app_name, :root, class: "header__logo"
         = render partial: '/layouts/user_icon', locals: { user: current_user, size: "18x18", klass: "margin_minus2" }
         = link_to( "Top", root_path )
         = link_to( "Logout", logout_path )
-      - else
-        Login:
-        = link_to "Twitter", "/auth/twitter"
     = simple_format( flash[:notice], style: "color: green;" ) if flash[:notice].present?
     = simple_format( flash[:alert], style: "color: red;" ) if flash[:alert].present?
     .body
       = yield
     %footer.footer
-      Developed by
+      %p
+      Special Thanks ｜ 利用規約 ｜ blog
+      %p
+      Copyright©
       = succeed "," do
-        %a{:href => "https://twitter.com/#{Settings.programmer_twitter_id}/", :target => "_blank"}
-          @#{Settings.programmer_twitter_id}
-      Designed by
-      = succeed "." do
         %a{:href => "https://twitter.com/#{Settings.designer_twitter_id}/", :target => "_blank"}
           @#{Settings.designer_twitter_id}
+      2014 All Rights Reserved.
+   

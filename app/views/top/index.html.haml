@@ -1,6 +1,22 @@
-%h1
+%h1.home-image
   = Settings.app_name
 
-= link_to "/auth/twitter" do
-  %i.fa.fa-twitter
-  使う
+= link_to "/auth/twitter", class: "button-login" do
+  %i.fa.fa-twitter.button-login__icon
+  %span.button-login__text
+    Twitterアカウントでログイン
+.about
+  %h2.about__title
+    morikomemoは長文でも切らずにつぶやけるTwitterクライアントです。
+  .about__section
+    %h3.about__heading
+      morikomemoとは？
+    %p
+      morikomemo（もりこめも）は、140文字しかつぶやけないTwitterでそれ以上のつぶやきを残したい時に便利です。また、プライベートなオンラインメモ帳としても使用する事ができます。
+  .about__section
+    %h3.about__heading
+      作った人
+    %p
+      moriko（@moriko_o）
+      %br
+      morikomemo Githubリポジトリ https://github.com/moritamoriko/morikomemo

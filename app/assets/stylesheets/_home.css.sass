@@ -1,0 +1,23 @@
+.button-login
+  display: block
+  margin: 0 auto
+  width: 440px
+  height: 80px
+  background-color: $red
+  border: 1px solid $dark-red
+  +border-radius(6px)
+  text-align: center
+  text-decoration: none
+  color: $white
+  font-size: 20px
+  position: relative
+  line-height: 80px
+  @media screen and (max-width: #{$break-point})
+    width: 10%
+  &:hover
+    background-color: lighten($red, 10%)
+.button-login__text
+  +inline-block
+.button-login__icon
+  font-size: 42px
+  +inline-block
