@@ -7,7 +7,7 @@
     - if Rails.env == 'development'
       = javascript_include_tag "xray"
     = csrf_meta_tags
-  %body
+  %body{class: "#{signed_in? ? 'yes' : 'no'}"}
     - if signed_in?
       %header.header__signed_in
         = link_to Settings.app_name, :root, class: "header__logo"
@@ -20,11 +20,9 @@
       = yield
     %footer.footer
       %p
-      Special Thanks ｜ 利用規約 ｜ blog
+        Special Thanks ｜ blog
       %p
-      Copyright©
-      = succeed "," do
-        %a{:href => "https://twitter.com/#{Settings.designer_twitter_id}/", :target => "_blank"}
-          @#{Settings.designer_twitter_id}
-      2014 All Rights Reserved.
+        Copyright©
+        = succeed "," do
+          %a{:href => "https://twitter.com/#{Settings.designer_twitter_id}/", :target => "_blank"}@#{Settings.designer_twitter_id}2014 All Rights Reserved.
    
