@@ -20,9 +20,11 @@
       = yield
     %footer.footer
       %p
-        Special Thanks ｜ blog
+        = link_to( "Special Thanks" , "http://yahoo.co.jp" )
+        ｜
+        = link_to( "blog" , "http://yahoo.co.jp" , :target => "_blank" )
       %p
         Copyright©
-        = succeed "," do
-          %a{:href => "https://twitter.com/#{Settings.designer_twitter_id}/", :target => "_blank"}@#{Settings.designer_twitter_id}2014 All Rights Reserved.
+        = link_to( "@#{Settings.designer_twitter_id}" , "https://twitter.com/#{Settings.designer_twitter_id}/" , :target => "_blank")
+        2014 All Rights Reserved.
    

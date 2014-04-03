@@ -1,6 +1,11 @@
-.home-image
+.home-head
   background-color: $yellow
-
+  padding-bottom: 20px
+.heme-head__main-pict
+  background-image: image-url("home_title.png")
+  background-repeat: no-repeat
+  background-position: center
+  height: 420px
 .button-login
   display: block
   margin: 0 auto
@@ -15,7 +20,7 @@
   position: relative
   line-height: 80px
   @media screen and (max-width: #{$break-point})
-    width: 10%
+    width: 50%
   &:hover
     background-color: lighten($red, 10%)
 .button-login__text
@@ -23,3 +28,12 @@
 .button-login__icon
   font-size: 42px
   +inline-block
+.about
+  padding-bottom: 20px
+.about__title
+  margin: 0 auto
+  font-size: 20px
+  font-weight: bold
+  text-algin: center
+.about__heading
+  color: #1499a3
