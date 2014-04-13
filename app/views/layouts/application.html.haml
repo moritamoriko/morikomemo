@@ -10,10 +10,12 @@
   %body{class: "#{signed_in? ? 'yes' : 'no'}"}
     - if signed_in?
       %header.header__signed_in
-        = link_to Settings.app_name, :root, class: "header__logo"
-        = render partial: '/layouts/user_icon', locals: { user: current_user, size: "18x18", klass: "margin_minus2" }
-        = link_to( "Top", root_path )
-        = link_to( "Logout", logout_path )
+        .wrapper
+          = link_to image_tag( 'header_logo.png', name: "morikomemo", class: ""), :root
+          %ul.header__menu
+            %li= render partial: '/layouts/user_icon', locals: { user: current_user, size: "18x18", klass: "margin_minus2" }
+            %li= link_to( "memo一覧", root_path )
+            %li= link_to( "Logout", logout_path )
     = simple_format( flash[:notice], style: "color: green;" ) if flash[:notice].present?
     = simple_format( flash[:alert], style: "color: red;" ) if flash[:alert].present?
     .body
