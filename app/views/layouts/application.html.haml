@@ -19,12 +19,12 @@
     .body
       = yield
     %footer.footer
-      %p
-        = link_to( "Special Thanks" , "http://yahoo.co.jp" )
-        ｜
-        = link_to( "blog" , "http://yahoo.co.jp" , :target => "_blank" )
-      %p
-        Copyright©
-        = link_to( "@#{Settings.designer_twitter_id}" , "https://twitter.com/#{Settings.designer_twitter_id}/" , :target => "_blank")
-        2014 All Rights Reserved.
+      .wrapper
+        %ul.footer-links
+          %li.footer-links__link= link_to( "Special Thanks", "http://yahoo.co.jp", class: "gray-link")
+          %li.footer-links__link= link_to( "blog", "http://yahoo.co.jp", target: "_blank", class: "gray-link")
+        %small
+          Copyright©
+          = link_to( "@#{Settings.designer_twitter_id}", "https://twitter.com/#{Settings.designer_twitter_id}/", target: "_blank", class: "gray-link")
+          2014 All Rights Reserved.
    

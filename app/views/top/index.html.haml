@@ -1,27 +1,33 @@
 .home-head
-  %h1.heme-head__main-pict
-    / = Settings.app_name
-  = link_to "/auth/twitter", class: "button-login" do
-    %i.fa.fa-twitter.button-login__icon
-    %span.button-login__text
-      Twitterアカウントでログイン
+  .wrapper
+    %h1.heme-head__main-pict
+      =image_tag('home_title.png', class: "heme-head__title-pict")
+      / = Settings.app_name
+    .button-login-wrapper
+      = link_to "/auth/twitter", class: "button-login" do
+        %i.fa.fa-twitter.button-login__icon
+        %span.button-login__text
+          Twitterアカウントでログイン
 
 .about
-  %h2.about__title
-    morikomemoは長文でも切らずにつぶやけるTwitterクライアントです。
-  .about__section
-    %h3.about__heading
-      morikomemoとは？
-    %p
-      morikomemo（もりこめも）は、140文字しかつぶやけないTwitterでそれ以上のつぶやきを残したい時に便利です。また、プライベートなオンラインメモ帳としても使用する事ができます。
-  .about__section
-    %h3.about__heading
-      作った人
-    %p
-      = surround 'moriko（', '）' do
-        = link_to( "@moriko_o" , "https://twitter.com/moriko_o/" , :target => "_blank" )
-      
-      %br
-      morikomemo Githubリポジトリ
-      = link_to( "https://github.com/moritamoriko/morikomemo" , "https://github.com/moritamoriko/morikomemo" , :target => "_blank" )
+  .wrapper
+    %h2.about__title
+      morikomemoは長文でも切らずにつぶやけるTwitterクライアントです。
+    .about__section
+      %h3.about__heading
+        =image_tag('icon_unko.png', class: "about__heading--icon")
+        morikomemoとは？
+      %p.about__text
+        morikomemo（もりこめも）は、140文字しかつぶやけないTwitterでそれ以上のつぶやきを残したい時に便利です。また、プライベートなオンラインメモ帳としても使用する事ができます。
+    .about__section
+      %h3.about__heading
+        =image_tag('icon_unko.png', class: "about__heading--icon")
+        作った人
+      %p.about__text
+        = surround 'moriko（', '）' do
+          = link_to( "@moriko_o" , "https://twitter.com/moriko_o/" , :target => "_blank" )
+        
+        %br
+        morikomemo Githubリポジトリ
+        = link_to( "https://github.com/moritamoriko/morikomemo" , "https://github.com/moritamoriko/morikomemo" , :target => "_blank" )
 

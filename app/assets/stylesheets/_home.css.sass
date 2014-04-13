@@ -2,38 +2,26 @@
   background-color: $yellow
   padding-bottom: 20px
 .heme-head__main-pict
-  background-image: image-url("home_title.png")
-  background-repeat: no-repeat
-  background-position: center
-  height: 420px
-.button-login
-  display: block
+  max-width: 400px
   margin: 0 auto
-  width: 440px
-  height: 80px
-  background-color: $red
-  border: 1px solid $dark-red
-  +border-radius(6px)
-  text-align: center
-  text-decoration: none
-  color: $white
-  position: relative
-  line-height: 80px
-  @media screen and (max-width: #{$break-point})
-    width: 50%
-  &:hover
-    background-color: lighten($red, 10%)
-.button-login__text
-  +inline-block
-.button-login__icon
-  font-size: 42px
-  +inline-block
+.heme-head__title-pict
+  display: block
+  width: 100%
 .about
+  margin: 0 30px
   padding-bottom: 20px
 .about__title
-  margin: 0 auto
-  font-size: 20px
+  margin: 42px auto
+  font-size: 128%
   font-weight: bold
-  text-algin: center
+  text-align: center
 .about__heading
-  color: #1499a3
+  margin-bottom: 10px
+  color: $aqua
+  font-size: 110%
+  font-weight: bold
+.about__heading--icon
+  vertical-align: middle
+.about__text
+  margin-left: 44px
+  margin-bottom: 16px

@@ -1,12 +1,27 @@
-.body
+body
   background-color: $ivory
   font-family: "Hiragino Kaku Gothic ProN",Meiryo,sans-serif
   font-size: 16px
-  line-height: 1.3
+  line-height: 1.8
   font-weight: normal
+  color: $gray
+.wrapper
+  max-width: $max-width
+  margin: 0 auto
+a
+  color: $red
+  +hover-link
+.gray-link
   color: $gray
 .footer
   background-color: $dark-ivory
-  padding: 20px 0
+  padding: 14px 0
   text-align: center
-  font-size: 0.8em
+  font-size: 80%
+.footer-links__link
+  +inline-block
+  &:after
+    content: " |"
+  &:last-child
+    &:after
+      content: none

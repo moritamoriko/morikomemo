@@ -1,0 +1,26 @@
+.button-login-wrapper
+  max-width: 400px
+  margin: 0 auto
+  padding: 0 10px
+.button-login
+  display: block
+  width: 100%
+  height: 70px
+  background-color: $red
+  border: 1px solid $dark-red
+  +border-radius(6px)
+  text-align: center
+  text-decoration: none
+  color: $white
+  position: relative
+  line-height: 70px
+  //@media screen and (max-width: #{$break-point})
+  //  width: 50%
+  &:hover
+    background-color: lighten($red, 10%)
+    text-decoration: none
+.button-login__text
+  +inline-block
+.button-login__icon
+  font-size: 42px
+  +inline-block
