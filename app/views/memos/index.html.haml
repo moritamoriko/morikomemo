@@ -1,6 +1,8 @@
-- @memos.each do |memo|
- %li.memo
-  = memo.entry.truncate(140)
-  = link_to 'read more' , memo_path(memo)
+%ul.memos-list
+  - @memos.each do |memo|
+    %li.memos-list__box
+      = memo.entry.truncate(140)
+      = link_to 'read more' , memo_path(memo)
+      = link_to 'つぶやく' , tweet_memo_path(memo), class: "memo__action-link--tweet normal-button"
 
 = link_to '新しく書く' , new_memo_path
