@@ -12,11 +12,12 @@
       %header.header__signed_in
         .wrapper
           = link_to image_tag( 'header_logo.png', name: "morikomemo", class: ""), :root
+          = render partial: '/layouts/user_icon', locals: { user: current_user, size: "18x18", klass: "margin_minus2" }
+          %i.fa.fa-th-list.button-list__icon
           %ul.header__menu
-            %li= render partial: '/layouts/user_icon', locals: { user: current_user, size: "18x18", klass: "margin_minus2" }
-            %li= link_to("新しく書く" , new_memo_path) 
-            %li= link_to( "memo一覧", root_path )
-            %li= link_to( "Logout", logout_path )
+            %li.header__menu--links= link_to("new" , new_memo_path) 
+            %li.header__menu--links= link_to( "list", root_path )
+            %li.header__menu--links= link_to( "Logout", logout_path )
     = simple_format( flash[:notice], style: "color: green;" ) if flash[:notice].present?
     = simple_format( flash[:alert], style: "color: red;" ) if flash[:alert].present?
     .body
