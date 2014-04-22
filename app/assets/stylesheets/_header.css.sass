@@ -3,19 +3,48 @@
   heigth: 90px
   //+filter-gradient(#b0ff32, #cff98b, vertical)
   //+background-image(linear-gradient(top,  #b0ff32 0%,#cff98b 91%))
-  //position: rerative
-  //z-index: 2
+  position: rerative
+  z-index: 2
+  +clearfix
   //+single-box-shadow
+.header__menu--left
+  float: left
+  widht: 230px
 .header__logo
+.header__menu--right
+  float: right
+  background-color: #eeeeee
+  +inline-block
+.user-icon
+  +border-radius(25px)
 .button-list__icon
   font-size: 24px
   color: $white
   +inline-block
 .header__menu
+  position: absolute
+  z-index: 10
+  top: 70px
+  left: 70%
+  width: 150px
   font-size: 80%
-  +inline-block
-.header__menu--links
-  display: inline-block
-  margin-left: 20px
+  background-color: $white
+  border: 1px solid $pale-ivoyr
+  +border-bottom-radius(4px)
+  +box-shadow($dark-ivory 0 2px 2px)
+  &:before
+    content: "▲"
+    color: $white
+    position: absolute
+    z-index: 10
+    right: 10px
+    margin-top: -15px
+.header__menu--list
+  padding: 6px
+  border-bottom: 1px solid $pale-ivoyr
+  &:hover
+    background-color: lighten($aqua, 60%)
+  &:last-child
+    border-bottom: none
 .about
   margin: 0 auto
