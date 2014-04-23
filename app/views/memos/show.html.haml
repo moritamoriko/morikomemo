@@ -1,6 +1,6 @@
 .memo
   .memo__entry
-    = @memo.entry
+    = simple_format(@memo.entry)
   %p.memo__user
     %span.memo__user-image= image_tag(@memo.user.image, alt: "@memo.user.nickname")
     %span.memo__user-nickname= @memo.user.nickname
