@@ -1,13 +1,12 @@
 .home-head
-  .wrapper
-    %h1.heme-head__main-pict
-      =image_tag('home_title.png', class: "heme-head__title-pict")
-      / = Settings.app_name
-    .button-login-wrapper
-      = link_to "/auth/twitter", class: "button-login" do
-        %i.fa.fa-twitter.button-login__icon
-        %span.button-login__text
-          Twitterアカウントでログイン
+  %h1.heme-head__main-pict
+    =image_tag('home_title.png', class: "heme-head__title-pict")
+    / = Settings.app_name
+  .button-login-wrapper
+    = link_to "/auth/twitter", class: "button-login" do
+      %i.fa.fa-twitter.button-login__icon
+      %span.button-login__text
+        Twitterアカウントでログイン
 
 .about
   .wrapper
