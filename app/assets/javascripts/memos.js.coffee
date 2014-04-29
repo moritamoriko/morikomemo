@@ -1,3 +1,11 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+$ ->
+  $('.js-open-menu-children').click ->
+    $(this).parent().find('.js-opened-menu-children').toggle()
+
+  $(".header__menu--right").hover (->
+      $("body").addClass('js-keep-child')
+      ), ->
+        $("body").removeClass('js-keep-child')
+    $("body").click ->
+      if not $("body").hasClass("js-keep-child")
+        $('.js-opened-menu-children').hide()

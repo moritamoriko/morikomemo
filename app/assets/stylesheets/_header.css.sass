@@ -1,11 +1,10 @@
 .header__signed_in
   background-color: $yellow
-  heigth: 90px
+  height: 60px
   //+filter-gradient(#b0ff32, #cff98b, vertical)
   //+background-image(linear-gradient(top,  #b0ff32 0%,#cff98b 91%))
-  position: rerative
+  position: relative
   z-index: 2
-  +clearfix
   //+single-box-shadow
 .header__menu--left
   float: left
@@ -13,33 +12,50 @@
 .header__logo
 .header__menu--right
   float: right
-  background-color: #eeeeee
   +inline-block
+  position: relative
 .user-icon
   +border-radius(25px)
+
+.header-right-menu__icon-image
+  display: block
+  height: 42px
+  width: 42px
+  float: left
+  +border-radius(50%)
+  margin-top: 9px
+
 .button-list__icon
   font-size: 24px
   color: $white
-  +inline-block
-.header__menu
+  height: 60px
+  width: 60px
+  display: block
+  float: left
+  text-align: center
+  line-height: 60px
+  cursor: pointer
+
+.header-menu-children
   position: absolute
   z-index: 10
-  top: 70px
-  left: 70%
+  top: 60px
+  right: 0px
   width: 150px
   font-size: 80%
   background-color: $white
   border: 1px solid $pale-ivoyr
   +border-bottom-radius(4px)
   +box-shadow($dark-ivory 0 2px 2px)
+  display: none
   &:before
     content: "▲"
     color: $white
     position: absolute
     z-index: 10
-    right: 10px
+    right: 22px
     margin-top: -15px
-.header__menu--list
+.header-menu-children__list
   padding: 6px
   border-bottom: 1px solid $pale-ivoyr
   &:hover
