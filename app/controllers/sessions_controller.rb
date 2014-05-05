@@ -21,14 +21,14 @@ class SessionsController < ApplicationController
       return
     end
 
-    redirect_to memos_path, notice: "ログインしました。"
+    redirect_to memos_path
   end
 
   # ログアウト
   def destroy
     session[:user_id] = nil
 
-    redirect_to :root, notice: "ログアウトしました。"
+    redirect_to :root
   end
 
   # ログインエラー

@@ -1,12 +1,12 @@
-%h1 テキストぼっくす
+-# = current_user.memos.last.try(:entry) # debug用
+.wrapper
+  %h1.new__page-title
+    あたらしく書く
 
-= current_user.memos.last.try(:entry) # debug用
+  = form_for @memo do |f|
+    %div.field
+      - # = f.label :text
+      = f.text_area :entry , required: "" , class: "text-area" 
 
-= form_for @memo do |f|
-  %div.field
-    = f.label :text
-    %br
-    = f.text_area :entry , required: ""
-
-  %div.actions
-    = f.submit
+    %div.actions
+      = f.submit
