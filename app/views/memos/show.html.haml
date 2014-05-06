@@ -9,6 +9,7 @@
     .memo__entry
       .memos-list__box
         = simple_format(@memo.entry)
+        %span.memo__time-stamp= l(@memo.created_at, format: :long)
     - if signed_in? and (@memo.user == current_user)
       %ul.memo__actions
         %li.memo__action--edit

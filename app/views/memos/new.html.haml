@@ -4,9 +4,9 @@
     あたらしいメモ
 
   = form_for @memo do |f|
-    %div.field
+    .field__text-area
       - # = f.label :text
-      = f.text_area :entry , required: "" , class: "text-area" 
+      = f.text_area :entry , required: "" , class: "text-area js-autosize" 
+    .field__button-area
+      = f.submit '登録する', class: "button-register"
 
-    %div.actions
-      = f.submit

@@ -1,3 +1,4 @@
+//TOPのログインボタン
 .button-login-wrapper
   max-width: 400px
   margin: 0 auto
@@ -17,10 +18,34 @@
   //@media screen and (max-width: #{$break-point})
   //  width: 50%
   &:hover
-    background-color: lighten($red, 10%)
+    background-color: lighten($red, 4%)
     text-decoration: none
 .button-login__text
   +inline-block
 .button-login__icon
   font-size: 42px
   +inline-block
+
+
+//新規投稿ボタン
+.button-register
+  margin: 0 auto
+  display: block
+  width: 180px
+  height: 40px
+  background-color: $aqua
+  border: 1px solid $dark-aqua
+  +border-radius(4px)
+  text-align: center
+  text-decoration: none
+  color: $white
+  position: relative
+  line-height: 40px
+  font-family: "Hiragino Kaku Gothic ProN",Meiryo,sans-serif
+  font-size: 100%
+  cursor: pointer
+  //@media screen and (max-width: #{$break-point})
+  //  width: 50%
+  &:hover
+    background-color: lighten($aqua, 4%)
+    text-decoration: none
