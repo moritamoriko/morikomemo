@@ -1,8 +1,11 @@
 .wrapper
+  %h1.page-title
+    メモいちらん
   %ul.memos-list
     - @memos.each do |memo|
-      %li.memos-list__box
-        = memo.entry.truncate(140)
-        = link_to 'read more' , memo_path(memo)
-        = link_to 'つぶやく' , tweet_memo_path(memo), class: "memo__action-link--tweet normal-button"
-
+      .memos-list__contener
+        = link_to tweet_memo_path(memo) , class: "tweet-button" do
+          %i.fa.fa-twitter.tweet-button__icon
+        %li.memos-list__box
+          = memo.entry.truncate(140)
+          = link_to 'read more...' , memo_path(memo) , class: "memos-list__box--link"

@@ -52,7 +52,8 @@ class MemosController < ApplicationController
       twitter_client.update(@memo.entry)
     end
 
-    flash[:notice] = "tweet: #{@memo.entry}"
+    # flash[:notice] = "メモをつぶやきました！: #{@memo.entry}"
+    flash[:notice] = "メモをつぶやきました！"
     render :show
   end
 
