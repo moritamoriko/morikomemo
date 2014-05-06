@@ -16,7 +16,7 @@
     = simple_format( flash[:alert], style: "color: red;" ) if flash[:alert].present?
     .body
       = yield
-    %footer.footer
+    %footer.footer#footer
       .wrapper
         %ul.footer-links
           %li.footer-links__link= link_to( "Special Thanks", "http://yahoo.co.jp", class: "gray-link")
