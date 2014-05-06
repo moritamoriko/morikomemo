@@ -31,13 +31,13 @@ class MemosController < ApplicationController
   def update
     @memo = Memo.find(params[:id])
     @memo.update(memo_params)
-    redirect_to edit_memo_path(@memo), notice: "編集しました。"
+    redirect_to edit_memo_path(@memo), notice: "メモを編集しました"
   end
 
   def destroy
     @memo = Memo.find(params[:id])
     @memo.destroy
-    redirect_to memos_path, notice: "削除しました。"
+    redirect_to memos_path, notice: "メモを削除しました"
   end
 
   def tweet

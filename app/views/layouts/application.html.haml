@@ -12,8 +12,12 @@
       = render 'signed_in_header'
     - else
       = render 'not_signed_in_header'
-    = simple_format( flash[:notice], style: "color: green;" ) if flash[:notice].present?
-    = simple_format( flash[:alert], style: "color: red;" ) if flash[:alert].present?
+    - if flash[:notice].present?
+      .notice
+        = simple_format( flash[:notice])
+    - if flash[:alert].present?
+      .alert
+        = simple_format( flash[:alert]) 
     .body
       = yield
     %footer.footer#footer
