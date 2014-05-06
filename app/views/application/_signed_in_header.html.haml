@@ -1,8 +1,8 @@
 %header.header
   .wrapper
-    .header__menu--left
+    .header__menu-left
       = link_to image_tag( 'header_logo.png', name: "morikomemo", class: ""), :root
-    .header__menu--right
+    .header__menu-right
       = render partial: '/layouts/user_icon', locals: { user: current_user, size: "50x50", klass: "margin_minus2" }
       %i.fa.fa-bars.button-list__icon.js-open-menu-children
       %ul.header-menu-children.js-opened-menu-children

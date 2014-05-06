@@ -2,9 +2,10 @@
   .wrapper
     - if signed_in? and (@memo.user != current_user) or not signed_in?
       %p.memo__user
-        %span.memo__user-image= image_tag(@memo.user.image, alt: @memo.user.nickname)
-        %span.memo__user-nickname= @memo.user.nickname
-        のメモ
+        %span= image_tag(@memo.user.image, alt: @memo.user.nickname, class: "memo__user-icon")
+        %span.memo__user-nickname
+          = @memo.user.nickname
+          のメモ
     .memo__entry
       .memos-list__box
         = simple_format(@memo.entry)

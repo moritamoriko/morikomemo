@@ -2,7 +2,7 @@ $ ->
   $('.js-open-menu-children').click ->
     $(this).parent().find('.js-opened-menu-children').toggle()
 
-  $(".header__menu--right").hover (->
+  $(".header__menu-right").hover (->
       $("body").addClass('js-keep-child')
       ), ->
         $("body").removeClass('js-keep-child')
