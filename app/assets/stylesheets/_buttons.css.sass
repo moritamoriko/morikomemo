@@ -54,15 +54,33 @@
 //tweetボタン
 .tweet-button
   float: left
-  background-color: $aqua
   width: 60px
   height: 60px
   +border-radius(50%)
   text-align: center
   margin-right: 30px
-.tweet-button__icon
+
+//緑
+.tweet-button-aqua
+  background-color: $aqua
+  &:hover
+    background-color: lighten($aqua, 4%)
+    text-decoration: none
+
+//白
+.tweet-button-white
+  background-color: $white
+  &:hover
+    background-color: $pale-gray
+    text-decoration: none
+
+//アイコン
+.aqua-tweet-button__icon
   color: $white
   font-size: 36px
   line-height: 60px
 
-  
+.white-tweet-button__icon
+  color: $ivory
+  font-size: 36px
+  line-height: 60px
