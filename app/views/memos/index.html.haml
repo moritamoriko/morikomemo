@@ -4,10 +4,12 @@
   %ul.memos-list
     - @memos.each do |memo|
       .memos-list__contener
-        = link_to tweet_memo_path(memo) , class: "tweet-button tweet-button-aqua" do
-          %i.fa.fa-twitter.aqua-tweet-button__icon
-        = link_to tweet_memo_path(memo) , class: "tweet-button tweet-button-white" do
-          %i.fa.fa-twitter.white-tweet-button__icon
+        - if memo.posted
+          = link_to tweet_memo_path(memo) , class: "tweet-button tweet-button-white" do
+            %i.fa.fa-twitter.white-tweet-button__icon
+        - else
+          = link_to tweet_memo_path(memo) , class: "tweet-button tweet-button-aqua" do
+            %i.fa.fa-twitter.aqua-tweet-button__icon
         %li.memos-list__box
           = memo.entry.truncate(140)
           = link_to 'read more...' , memo_path(memo) , class: "memos-list__box--link"

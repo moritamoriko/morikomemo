@@ -51,6 +51,8 @@ class MemosController < ApplicationController
     else
       twitter_client.update(@memo.entry)
     end
+    @memo.posted = true
+    @memo.save
 
     # flash[:notice] = "メモをつぶやきました！: #{@memo.entry}"
     flash[:notice] = "メモをつぶやきました！"
