@@ -1,7 +1,8 @@
 class MemosController < ApplicationController
   skip_before_action :authenticate, {:only => :show}
   def index
-   @memos = current_user.memos
+    session[:return_to] = nil
+    @memos = current_user.memos
   end
 
   def new
@@ -21,6 +22,7 @@ class MemosController < ApplicationController
   end
 
   def show
+    session[:return_to] = request.original_url
     @memo = Memo.find(params[:id])
   end
 
@@ -56,7 +58,8 @@ class MemosController < ApplicationController
 
     # flash[:notice] = "メモをつぶやきました！: #{@memo.entry}"
     flash[:notice] = "メモをつぶやきました！"
-    render :show
+    redirect_to(session[:return_to] || memos_url)
+    session[:return_to] = nil
   end
 
   private
