@@ -1,5 +1,5 @@
 Twitterstudy::Application.routes.draw do
-  get "about/index"
+  resources :about
   resources :memos do
     member do
       get 'tweet'
