@@ -1,10 +1,15 @@
 //複数ページ共通モジュール
 .memo__entry
   margin: 30px 20px
+  @media screen and (max-width: #{$break-point})
+    margin: 20px 14px
+
 
 .memos-list__contener
   +clearfix
   margin: 30px 20px
+  @media screen and (max-width: #{$break-point})
+    margin: 20px 14px
   
 .memos-list__box
   background-color: $ivory
@@ -12,6 +17,9 @@
   +border-radius(6px)
   padding: 16px
   +clearfix
+  @media screen and (max-width: #{$break-point})
+    padding: 8px
+    +border-radius(4px)
 
 .memos-list__box p
   margin-bottom: 1.2em

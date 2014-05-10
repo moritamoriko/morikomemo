@@ -5,21 +5,33 @@ body
   line-height: 1.8
   font-weight: normal
   color: $gray
+  @media screen and (max-width: #{$break-point})
+    font-size: 14px
+
+img
+  max-width: 100%
+  height: auto
+
 .wrapper
   max-width: $max-width
   margin: 0 auto
+
 a
   color: $red
   +hover-link
+
 .gray-link
   color: $gray
+
 .white-link
   color: $white
+
 .footer
   background-color: $dark-ivory
   padding: 14px 0
   text-align: center
   font-size: 80%
+
 .footer-links__link
   +inline-block
   &:after
@@ -27,6 +39,7 @@ a
   &:last-child
     &:after
       content: none
+
 .footer-copyright
   color: $white
   font-size: 90%

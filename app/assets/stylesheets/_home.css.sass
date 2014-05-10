@@ -1,27 +1,42 @@
 .home-head
   background-color: $yellow
   padding-bottom: 20px
+
 .heme-head__main-pict
   max-width: 400px
   margin: 0 auto
+
 .heme-head__title-pict
   display: block
   width: 100%
+
 .about
   margin: 0 30px
   padding-bottom: 20px
+  @media screen and (max-width: #{$break-point})
+    margin: 0 10px
+
 .about__title
   margin: 42px auto
   font-size: 140%
   font-weight: bold
   text-align: center
+
 .about__heading
   margin-bottom: 10px
   color: $aqua
   font-size: 110%
   font-weight: bold
+
 .about__heading--icon
   vertical-align: middle
+  @media screen and (max-width: #{$break-point})
+    width: 20px
+    height: auto
+
 .about__text
   margin-left: 44px
   margin-bottom: 16px
+  @media screen and (max-width: #{$break-point})
+    margin-left: 22px
+

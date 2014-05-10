@@ -12,6 +12,10 @@
   widht: 230px
 
 .header__logo
+  @media screen and (max-width: #{$break-point})
+    margin-top: 10px 
+    width: 180px
+    height: auto
 
 .header__menu-right
   float: right
@@ -57,6 +61,8 @@
   +border-bottom-radius(4px)
   +box-shadow($dark-ivory 0 2px 2px)
   display: none
+  @media screen and (max-width: #{$break-point})
+    font-size: 100%
   &:before
     content: "▲"
     color: $white
