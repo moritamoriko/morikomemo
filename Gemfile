@@ -48,7 +48,7 @@ end
 # gem 'debugger', group: [:development, :test]
 gem 'minimum-omniauth-scaffold'
 gem 'haml-rails'
-gem 'twitter'
+gem 'twitter','4.8.1'
 
 group :production do
 	gem 'pg'
