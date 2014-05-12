@@ -1,14 +1,11 @@
 # morikomemo
-
-140文字以上のつぶやきをURLでTwitterにシェアできるアプリになる予定。
-
+140文字以上のつぶやきをURLでTwitterにシェアできるwebアプリ。
+https://morikomemo.herokuapp.com/
 
 ## Local Setting
-
 ### GitHub上でFork
-
-`
 https://github.com/moritamoriko/morikomemo/
+
 ```
 
 ### リポジトリをローカルへ作成
