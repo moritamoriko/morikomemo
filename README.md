@@ -6,13 +6,11 @@ https://morikomemo.herokuapp.com/
 ### GitHub上でFork
 https://github.com/moritamoriko/morikomemo/
 
-```
-
 ### リポジトリをローカルへ作成
 
 ```
 cd ~/WORK_DIRECTORY
-git clone git@github.com:moritamoriko/morikomemo.git
+git clone https://github.com/moritamoriko/morikomemo.git
 cd morikomemo
 ```
 
