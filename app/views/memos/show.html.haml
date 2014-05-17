@@ -1,23 +1,27 @@
 .memo
   .wrapper
-    - if signed_in? and (@memo.user != current_user) or not signed_in?
-      %p.memo__user
-        %span= image_tag(@memo.user.image, alt: @memo.user.nickname, class: "memo__user-icon")
-        %span.memo__user-nickname
-          = @memo.user.nickname
-          のメモ
-    .memo__entry
-      .memos-list__box
-        = simple_format(@memo.entry)
-        %span.memo__time-stamp= l(@memo.created_at, format: :long)
-    - if signed_in? and (@memo.user == current_user)
-      %ul.memo__actions
-        %li.memo__action--edit
-          %i.fa.fa-pencil.memo-action__icon
-          = link_to 'メモを編集する' , edit_memo_path(@memo), class: "memo__action-link--edit normal-button"
-        %li.memo__action--delete
-          %i.fa.fa-trash-o.memo-action__icon
-          = link_to 'メモを削除する' , memo_path(@memo), method: :delete, data:{ confirm: '削除してもいいですか？' }, class: "memo__action-link--delete danger-button"
-        %li.memo__action--tweet
-          %i.fa.fa-twitter.memo-action__icon
-          = link_to 'つぶやく' , tweet_memo_path, class: "memo__action-link--tweet normal-button"
+    - if @memo.posted
+      - if signed_in? and (@memo.user != current_user) or not signed_in?
+        %p.memo__user
+          %span= image_tag(@memo.user.image, alt: @memo.user.nickname, class: "memo__user-icon")
+          %span.memo__user-nickname
+            = @memo.user.nickname
+            のメモ
+      .memo__entry
+        .memos-list__box
+          = simple_format(@memo.entry)
+          %span.memo__time-stamp= l(@memo.created_at, format: :long)
+      - if signed_in? and (@memo.user == current_user)
+        %ul.memo__actions
+          %li.memo__action--edit
+            %i.fa.fa-pencil.memo-action__icon
+            = link_to 'メモを編集する' , edit_memo_path(@memo), class: "memo__action-link--edit normal-button"
+          %li.memo__action--delete
+            %i.fa.fa-trash-o.memo-action__icon
+            = link_to 'メモを削除する' , memo_path(@memo), method: :delete, data:{ confirm: '削除してもいいですか？' }, class: "memo__action-link--delete danger-button"
+          %li.memo__action--tweet
+            %i.fa.fa-twitter.memo-action__icon
+            = link_to 'つぶやく' , tweet_memo_path, class: "memo__action-link--tweet normal-button"
+    - else
+      ああああ
+      

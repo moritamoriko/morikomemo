@@ -23,7 +23,7 @@ class MemosController < ApplicationController
 
   def show
     session[:return_to] = request.original_url
-    @memo = Memo.find(params[:id])
+    @memo = Memo.posted.find(params[:id])
   end
 
   def edit
