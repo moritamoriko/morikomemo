@@ -49,6 +49,7 @@ end
 gem 'minimum-omniauth-scaffold'
 gem 'haml-rails'
 gem 'twitter','4.8.1'
+gem 'rails_autolink'
 
 group :production do
 	gem 'pg'

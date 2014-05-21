@@ -9,7 +9,7 @@
     - if (signed_in? and (@memo.user == current_user)) or @memo.posted
       .memo__entry
         .memos-list__box
-          = simple_format(@memo.entry)
+          = auto_link(simple_format(@memo.entry),:html => {:target => "_blank"})
           %span.memo__time-stamp= l(@memo.created_at, format: :long)
       %ul.memo__actions
         %li.memo__action--edit
