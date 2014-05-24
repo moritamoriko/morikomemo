@@ -49,7 +49,7 @@ end
 gem 'minimum-omniauth-scaffold'
 gem 'haml-rails'
 gem 'twitter','4.8.1'
-gem 'rails_autolink'
+gem 'auto_html'
 gem 'kaminari'
 
 group :production do
