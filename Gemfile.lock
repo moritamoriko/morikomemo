@@ -103,6 +103,7 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    method_source (0.8.2)
     mime-types (1.25.1)
     minimum-omniauth-scaffold (0.1.10)
       awesome_print
@@ -143,6 +144,12 @@ GEM
       omniauth-oauth (~> 1.0)
     pg (0.17.1)
     polyglot (0.3.4)
+    pry (0.9.12.6)
+      coderay (~> 1.0)
+      method_source (~> 0.8)
+      slop (~> 3.4)
+    pry-rails (0.3.2)
+      pry (>= 0.9.10)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -179,6 +186,7 @@ GEM
       rdoc (~> 4.0, < 5.0)
     sexp_processor (4.4.3)
     simple_oauth (0.2.0)
+    slop (3.5.0)
     sprockets (2.11.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -227,6 +235,7 @@ DEPENDENCIES
   kaminari
   minimum-omniauth-scaffold
   pg
+  pry-rails
   rails (= 4.0.3)
   rails3_serve_static_assets!
   rails_autolink

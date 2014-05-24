@@ -65,6 +65,7 @@ group :development do
 	gem 'binding_of_caller'
 	gem 'erb2haml'
 	gem 'xray-rails'
+	gem 'pry-rails'
 end
 
 

@@ -2,7 +2,7 @@ class MemosController < ApplicationController
   skip_before_action :authenticate, {:only => :show}
   def index
     session[:return_to] = nil
-    @memos = current_user.memos
+    @memos = current_user.memos.order("created_at DESC").page(params[:page]).per(10)
   end
 
   def new
