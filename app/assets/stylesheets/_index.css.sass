@@ -20,6 +20,30 @@
     padding: 8px
     +border-radius(4px)
 
+.memos-list__box img
+  display: block
+  margin: 0 auto
+  width: 70%
+
+.memos-list__box .video
+  position: relative
+  padding-bottom: 56.25%
+  padding-top: 30px
+  height: 0
+  overflow: hidden
+
+.memos-list__box .video iframe,
+.memos-list__box .video object,
+.memos-list__box .video embed
+  position: absolute
+  top: 0
+  left: 0
+  width: 640px
+  height: 390px
+  @media screen and (max-width: #{$break-point})
+    width: 100%
+    height: 100%
+ 
 .memos-list__box p
   margin-bottom: 1.2em
 

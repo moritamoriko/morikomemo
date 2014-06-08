@@ -7,7 +7,9 @@ class Memo < ActiveRecord::Base
   auto_html_for :entry do
     html_escape
     image
-    youtube(:width => 400, :height => 250, :autoplay => true)
+    youtube(:width => 640, :height => 390, :autoplay => false)
+    twitter
+    soundcloud
     link :target => "_blank", :rel => "nofollow"
     simple_format
   end
